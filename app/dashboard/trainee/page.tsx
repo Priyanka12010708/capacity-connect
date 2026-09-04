@@ -11,28 +11,33 @@ export default function TraineeDashboard() {
       <Sidebar />
 
       {/* Main Content */}
-      <main className="flex-1 p-8">
+      <main className="min-w-0 flex-1 p-4 sm:p-6 lg:p-8">
         {/* Navbar */}
         <Navbar />
 
-        {/* Statistics Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        {/* Statistics */}
+        <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <StatCard title="Courses Enrolled" value="12" />
           <StatCard title="Assessments" value="8" />
           <StatCard title="Certificates" value="5" />
           <StatCard title="Completion" value="92%" />
-        </div>
+        </section>
 
-        {/* Recent Courses & Notifications */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-
+        {/* Recent Courses + Notifications */}
+        <section className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
           {/* Recent Courses */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-xl font-bold mb-4">
-              📚 Recent Courses
-            </h2>
+          <div className="rounded-xl bg-white p-6 shadow-sm">
+            <div className="mb-5">
+              <h2 className="text-xl font-bold text-gray-800">
+                📚 Recent Courses
+              </h2>
 
-            <div className="space-y-4">
+              <p className="mt-1 text-sm text-gray-500">
+                Continue where you left off.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4">
               <CourseCard
                 title="Meteorology Basics"
                 trainer="Dr. Sharma"
@@ -44,32 +49,90 @@ export default function TraineeDashboard() {
                 trainer="Dr. Meena"
                 progress={65}
               />
+
+              <CourseCard
+                title="Weather Forecasting"
+                trainer="Dr. Kumar"
+                progress={45}
+              />
+
+              <CourseCard
+                title="Disaster Management"
+                trainer="Dr. Rao"
+                progress={25}
+              />
             </div>
           </div>
 
           {/* Notifications */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-xl font-bold mb-4">
-              🔔 Notifications
-            </h2>
+          <div className="rounded-xl bg-white p-6 shadow-sm">
+            <div className="mb-5">
+              <h2 className="text-xl font-bold text-gray-800">
+                🔔 Notifications
+              </h2>
 
-            <ul className="space-y-4">
-              <li>✅ New course added: Oceanography</li>
-              <li>📝 Assessment due tomorrow</li>
-              <li>🏆 Certificate available</li>
-              <li>📢 Trainer uploaded new study materials</li>
-            </ul>
+              <p className="mt-1 text-sm text-gray-500">
+                Your latest learning updates.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="rounded-lg border p-4">
+                <p className="font-medium text-gray-800">
+                  ✅ New course added
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Oceanography is now available.
+                </p>
+              </div>
+
+              <div className="rounded-lg border p-4">
+                <p className="font-medium text-gray-800">
+                  📝 Assessment reminder
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Your assessment is due tomorrow.
+                </p>
+              </div>
+
+              <div className="rounded-lg border p-4">
+                <p className="font-medium text-gray-800">
+                  🏆 Certificate available
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Your latest certificate is ready to view.
+                </p>
+              </div>
+
+              <div className="rounded-lg border p-4">
+                <p className="font-medium text-gray-800">
+                  📢 New study materials
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  Your trainer uploaded new learning content.
+                </p>
+              </div>
+            </div>
           </div>
-
-        </div>
+        </section>
 
         {/* Upcoming Assessments */}
-        <div className="bg-white rounded-xl shadow-md p-6 mt-8">
-          <h2 className="text-xl font-bold mb-4">
-            📝 Upcoming Assessments
-          </h2>
+        <section className="mt-8 rounded-xl bg-white p-6 shadow-sm">
+          <div className="mb-5">
+            <h2 className="text-xl font-bold text-gray-800">
+              📝 Upcoming Assessments
+            </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <p className="mt-1 text-sm text-gray-500">
+              Complete your assessments before their deadlines.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <AssessmentCard
               subject="Meteorology Quiz"
               dueDate="15 September 2026"
@@ -80,7 +143,7 @@ export default function TraineeDashboard() {
               dueDate="18 September 2026"
             />
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );

@@ -8,14 +8,19 @@ export default function AssessmentCard({
   dueDate,
 }: AssessmentCardProps) {
   return (
-    <div className="bg-white rounded-xl shadow-md p-5">
-      <h3 className="text-lg font-semibold">{subject}</h3>
+    <div className="rounded-xl border bg-white p-5 shadow-sm transition hover:shadow-md">
+      <h3 className="text-lg font-semibold text-gray-800">
+        {subject}
+      </h3>
 
-      <p className="text-gray-500 mt-2">
+      <p className="mt-2 text-sm text-gray-500">
         Due: {dueDate}
       </p>
 
-      <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg">
+      <button
+        type="button"
+        className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+      >
         Start Assessment
       </button>
     </div>

@@ -10,58 +10,63 @@ import {
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 min-h-screen bg-blue-900 text-white p-6">
-      <h1 className="text-2xl font-bold mb-10">
-        🎓 Capacity Connect
-      </h1>
+    <aside className="hidden min-h-screen w-64 shrink-0 bg-blue-900 p-6 text-white md:block">
+      {/* Logo */}
+      <div className="mb-10">
+        <h1 className="text-2xl font-bold">🎓 Capacity Connect</h1>
+        <p className="mt-1 text-sm text-blue-200">
+          Learning Management Portal
+        </p>
+      </div>
 
-      <nav className="space-y-3">
+      {/* Navigation */}
+      <nav className="space-y-2">
         <Link
           href="/dashboard/trainee"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <LayoutDashboard size={20} />
-          Dashboard
+          <span>Dashboard</span>
         </Link>
 
         <Link
-          href="#"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          href="/dashboard/trainee"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <BookOpen size={20} />
-          My Courses
+          <span>My Courses</span>
         </Link>
 
         <Link
-          href="#"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          href="/dashboard/trainee"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <FolderOpen size={20} />
-          Resources
+          <span>Resources</span>
         </Link>
 
         <Link
-          href="#"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          href="/dashboard/trainee"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <FileText size={20} />
-          Assessments
+          <span>Assessments</span>
         </Link>
 
         <Link
-          href="#"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          href="/dashboard/trainee"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <Award size={20} />
-          Certificates
+          <span>Certificates</span>
         </Link>
 
         <Link
-          href="#"
-          className="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-800"
+          href="/dashboard/trainee"
+          className="flex items-center gap-3 rounded-lg p-3 transition hover:bg-blue-800"
         >
           <Settings size={20} />
-          Settings
+          <span>Settings</span>
         </Link>
       </nav>
     </aside>
