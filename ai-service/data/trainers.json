@@ -1,0 +1,46 @@
+[
+    {
+        "trainer_id": 1,
+        "name": "Trainer A",
+        "skills": [
+            "Python",
+            "Machine Learning",
+            "Data Science",
+            "Artificial Intelligence"
+        ],
+        "experience": 5
+    },
+    {
+        "trainer_id": 2,
+        "name": "Trainer B",
+        "skills": [
+            "AWS",
+            "Cloud Computing",
+            "DevOps",
+            "Docker"
+        ],
+        "experience": 6
+    },
+    {
+        "trainer_id": 3,
+        "name": "Trainer C",
+        "skills": [
+            "IoT",
+            "Embedded Systems",
+            "Arduino",
+            "Electronics"
+        ],
+        "experience": 4
+    },
+    {
+        "trainer_id": 4,
+        "name": "Trainer D",
+        "skills": [
+            "Statistics",
+            "Mathematics",
+            "Data Analysis",
+            "Research"
+        ],
+        "experience": 8
+    }
+]
